@@ -5,30 +5,21 @@
     function openWebAppAndroid(){
       window.location.replace("https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika");
     }
-    }
+    
 	function openMob() {
-  const iOS =
+   const iOS =
     !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
   
-  var userAgent = navigator.userAgent.toLowerCase(); 
-  var android = userAgent.indexOf("android") > -1; 
-  if (iOS) {
+   var userAgent = navigator.userAgent.toLowerCase(); 
+   var android = userAgent.indexOf("android") > -1; 
+   if (iOS) {
     window.location.replace("haahtelamobileapp://");
-      this.timer = setTimeout(this.openWebApp, 1000);
-    // setTimeout(function () { 
-    //   window.open("https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi"); }, 10);
-    // window.open("haahtelamobileapp://"); 
-    
+      this.timer = setTimeout(this.openWebApp, 1000);    
   }
   else if(android){
     window.location.replace("haahtelamobileapp://");
     this.timer = setTimeout(this.openWebAppAndroid, 1000);
-    // setTimeout(function () { window.open("https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika"); }, 10);
-    // window.open("haahtelamobileapp://");
-    
   }
-   
-
 }
 </script>
 <div id="app">
