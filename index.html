@@ -1,20 +1,30 @@
 <script type="text/javascript">
+	function openWebApp() {
+      window.location.replace("https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi");
+    }
+    function openWebAppAndroid(){
+      window.location.replace("https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika");
+    }
+    }
 	function openMob() {
   const iOS =
     !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
   
   var userAgent = navigator.userAgent.toLowerCase(); 
   var android = userAgent.indexOf("android") > -1; 
-  alert(iOS)
-  alert("android: "+ android)
   if (iOS) {
-    setTimeout(function () { window.open("https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi"); }, 25);
-    window.open("haahtelamobileapp://"); 
+    window.location.replace("haahtelamobileapp://");
+      this.timer = setTimeout(this.openWebApp, 1000);
+    // setTimeout(function () { 
+    //   window.open("https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi"); }, 10);
+    // window.open("haahtelamobileapp://"); 
     
   }
   else if(android){
-    setTimeout(function () { window.open("https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika"); }, 25);
-    window.open("haahtelamobileapp://");
+    window.location.replace("haahtelamobileapp://");
+    this.timer = setTimeout(this.openWebAppAndroid, 1000);
+    // setTimeout(function () { window.open("https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika"); }, 10);
+    // window.open("haahtelamobileapp://");
     
   }
    
