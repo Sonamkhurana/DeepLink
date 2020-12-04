@@ -1,5 +1,5 @@
 <script type="text/javascript">
-function openMob() {
+	function openMob() {
   const iOS =
     !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
   
@@ -8,13 +8,13 @@ function openMob() {
   alert(iOS)
   alert("android: "+ android)
   if (iOS) {
-    setTimeout(function () { window.location = "https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi"; }, 25);
-    window.location = "haahtelamobileapp://"; 
+    setTimeout(function () { window.open("https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi"); }, 25);
+    window.open("haahtelamobileapp://"); 
     
   }
   else if(android){
-    setTimeout(function () { window.location = "https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika"; }, 25);
-    window.location = "haahtelamobileapp://"; 
+    setTimeout(function () { window.open("https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika"); }, 25);
+    window.open("haahtelamobileapp://");
     
   }
    
