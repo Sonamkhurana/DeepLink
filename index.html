@@ -14,10 +14,14 @@
    var android = userAgent.indexOf("android") > -1; 
    if (iOS) {
 setTimeout(function () {
+  alert("in settimeout "+window.location)
   window.location.replace("https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi")
+  alert("after settimeout "+window.location)
     // window.open("https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi");
 }, 25);
+alert(window.location)
      window.location.replace("haahtelamobileapp://");
+     alert("after "+window.location)
      return false;
     //window.location.replace("haahtelamobileapp://");
       //this.timer = setTimeout(this.openWebApp, 1000);    
