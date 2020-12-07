@@ -13,16 +13,25 @@
    var userAgent = navigator.userAgent.toLowerCase(); 
    var android = userAgent.indexOf("android") > -1; 
    if (iOS) {
-    window.location.replace("haahtelamobileapp://");
+    //window.location.replace("haahtelamobileapp://");
+    window.open("haahtelamobileapp://")
       this.timer = setTimeout(this.openWebApp, 1000);    
   }
   else if(android){
-    window.location.replace("haahtelamobileapp://");
+    window.open("haahtelamobileapp://")
+    //window.location.replace("haahtelamobileapp://");
     this.timer = setTimeout(this.openWebAppAndroid, 1000);
+  }
+  else{
+    window.open("haahtelamobileapp://")
+    if (document.body.innerHTML === ""){
+      alert("hi")
+    }
   }
 }
 </script>
 <div id="app">
 
 	<button onClick="openMob()">Open the other app</button>
+  <a href="intent://#Intent;scheme=haahtelamobileapp;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.supercell.clashofclans&amp;%26referrer%3Dkinlan;end"> Take a QR code </a>
 </div>
