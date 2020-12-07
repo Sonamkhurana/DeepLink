@@ -13,9 +13,13 @@
    var userAgent = navigator.userAgent.toLowerCase(); 
    var android = userAgent.indexOf("android") > -1; 
    if (iOS) {
+     window.location.href = "haahtelamobileapp://";
+setTimeout(function () {
+    window.location.href = "https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi";
+}, 1000);
     //window.location.replace("haahtelamobileapp://");
-      this.timer = setTimeout(this.openWebApp, 1000);    
-    window.open("haahtelamobileapp://")
+      //this.timer = setTimeout(this.openWebApp, 1000);    
+   // window.open("haahtelamobileapp://")
       
   }
   else if(android){
