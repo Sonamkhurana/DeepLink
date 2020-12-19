@@ -43,10 +43,13 @@ alert(window.location)
   }
 }
 function openMobNew(){
+  alert("hi")
   var request = new XMLHttpRequest();  
-request.open('GET', 'http://www.mozilla.org1', true);
-request.onreadystatechange = function(){
+  request.open('GET', 'haahtelamobileapp://', true);
+  request.onreadystatechange = function(){
+  
     if (request.readyState === 4){
+      alert("state "+request.status)
         if (request.status === 404) {  
             alert("Oh no, it does not exist!");
         }  
@@ -54,11 +57,27 @@ request.onreadystatechange = function(){
 };
 request.send();
 }
+function openMobios(){
+    const now = new Date().valueOf()
+  setTimeout(() => {
+    // if (new Date().valueOf() - now > 100) {
+    //   alert("suckccccccssss")
+    //     return
+    // }
+    alert('location inside setTimeout before setting: ' + window.location.href)
+    window.location.href = 'https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi'
+    alert('location inside setTimeout after setting: ' + window.location.href)
+}, 2000)
+window.location.href = 'haahtelamobileapp://'
+alert('location before settimeout ' + window.location.href)
+}
 </script>
 <div id="app">
 
-	<button onClick="openMobNew()">Open the other app</button>
+	<button onClick="openMobios()">Open the other app</button>
 	<a
 		href="intent://#Intent;scheme=haahtelamobileapp;S.browser_fallback_url=https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika;end">
 		Take a QR code </a>
+
+
 </div>
