@@ -42,10 +42,22 @@ alert(window.location)
     }
   }
 }
+function openMobNew(){
+  var request = new XMLHttpRequest();  
+request.open('GET', 'http://www.mozilla.org', true);
+request.onreadystatechange = function(){
+    if (request.readyState === 4){
+        if (request.status === 404) {  
+            alert("Oh no, it does not exist!");
+        }  
+    }
+};
+request.send();
+}
 </script>
 <div id="app">
 
-	<button onClick="openMob()">Open the other app</button>
+	<button onClick="openMobNew()">Open the other app</button>
 	<a
 		href="intent://#Intent;scheme=haahtelamobileapp;S.browser_fallback_url=https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika;end">
 		Take a QR code </a>
