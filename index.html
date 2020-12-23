@@ -30,7 +30,7 @@ alert(window.location)
       
   }
   else if(android){
-    window.location.replace('intent://#Intent;scheme=haahtelamobileapp;S.browser_fallback_url=https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika;end')
+    window.location.replace('intent://#Intent;scheme=fi.medgroup.tyoaika;S.browser_fallback_url=https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika;end')
     //window.open("haahtelamobileapp://")
     //window.location.replace("haahtelamobileapp://");
     this.timer = setTimeout(this.openWebAppAndroid, 1000);
@@ -74,7 +74,7 @@ alert('location before settimeout ' + window.location.href)
 </script>
 <div id="app">
 
-	<button onClick="openMobios()">Open the other app</button>
+	<button onClick="openMob()">Open the other app</button>
 	<a
 		href="intent://#Intent;scheme=haahtelamobileapp;S.browser_fallback_url=https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika;end">
 		Take a QR code </a>
