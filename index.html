@@ -1,11 +1,4 @@
 <script type="text/javascript">
-	function openWebApp() {
-      window.open("https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi");
-    }
-    function openWebAppAndroid(){
-      window.location.replace("https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika");
-    }
-    
 	function openMob() {
    const iOS =
     !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
@@ -13,27 +6,12 @@
    var userAgent = navigator.userAgent.toLowerCase(); 
    var android = userAgent.indexOf("android") > -1; 
    if (iOS) {
-setTimeout(function () {
-  alert("in settimeout "+window.location)
-  window.location.replace("https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi")
-  alert("after settimeout "+window.location)
-    // window.open("https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi");
-}, 25);
-alert(window.location)
-  
-     //window.location.replace("haahtelamobileapp://");
      alert("after "+window.location)
      return false;
-    //window.location.replace("haahtelamobileapp://");
-      //this.timer = setTimeout(this.openWebApp, 1000);    
-   // window.open("haahtelamobileapp://")
-      
   }
   else if(android){
+    alert("Android: "+ android)
     window.location.replace('intent://#Intent;scheme=fi.medgroup.tyoaika;S.browser_fallback_url=https://play.google.com/store/apps/details?id=fi.medgroup.tyoaika;end')
-    //window.open("haahtelamobileapp://")
-    //window.location.replace("haahtelamobileapp://");
-    
   }
   else{
     window.open("haahtelamobileapp://")
@@ -42,35 +20,8 @@ alert(window.location)
     }
   }
 }
-function openMobNew(){
-  alert("hi")
-  var request = new XMLHttpRequest();  
-  request.open('GET', 'haahtelamobileapp://', true);
-  request.onreadystatechange = function(){
-  
-    if (request.readyState === 4){
-      alert("state "+request.status)
-        if (request.status === 404) {  
-            alert("Oh no, it does not exist!");
-        }  
-    }
-};
-request.send();
-}
-function openMobios(){
-    const now = new Date().valueOf()
-  setTimeout(() => {
-    // if (new Date().valueOf() - now > 100) {
-    //   alert("suckccccccssss")
-    //     return
-    // }
-    alert('location inside setTimeout before setting: ' + window.location.href)
-    window.location.href = 'https://apps.apple.com/fi/app/onni-ty%C3%B6aika/id1069896702?l=fi'
-    alert('location inside setTimeout after setting: ' + window.location.href)
-}, 2000)
-window.location.href = 'haahtelamobileapp://'
-alert('location before settimeout ' + window.location.href)
-}
+
+
 </script>
 <div id="app">
 
